@@ -1,0 +1,358 @@
+/////////////////////
+/// 
+/// HEADER COMPONENTS MAIN
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2rem auto;
+    align-items: center;
+    font-family: inherit;
+
+    &__title{
+        color: $secondaryColor;
+        font-size: 1.55rem;
+        font-weight: 700;
+        cursor: pointer;
+     
+        &--1{
+            text-transform: uppercase;
+        }
+
+        &--2{
+            color: $primaryTextColor;
+        }
+
+
+    }
+}
+
+
+/////////////////////
+/// 
+/// TIMER COMPONENT STYLE
+
+.timer{
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  &__h1{
+    margin: 1.5rem 0 1.5rem 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    
+  }
+    &__time{
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        margin: 0 auto;
+    
+    }
+
+&__digit-text{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+&__digit{
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+&__text{
+    align-self: center;
+}
+}
+
+
+
+
+/////////////////////
+/// 
+/// COMPOTITORS COMPONENT STYLE
+
+
+.Competitors{
+
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title{
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+        text-transform: capitalize;
+        margin: 1rem;
+    }
+
+    &__p{
+        width: 50%;
+        font-size: .6rem;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.3rem;
+        letter-spacing: .05rem;
+        color: $secondaryTextColor;
+      
+    }
+
+    &__Competitors{
+       display: grid;
+       grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      // width: 90%;
+    gap: 1rem;
+       margin: $spaceY;
+
+    }
+
+    &__compotitor{
+        position: relative;
+        width: 100%;
+        height: 450px;
+        box-shadow: 0 1rem 3rem rgba(rgb(218, 211, 211),0.1);
+           
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        right: 0;
+        bottom: 1rem;
+    }
+
+    &__name{
+        font-size: 1.3rem;
+     //   margin-bottom:1rem;
+        line-height: 1.7rem;
+        text-shadow: -2px -1px 3px rgba(201, 219, 31, 0.61);
+        letter-spacing: .2rem;
+    }
+    
+    &__votes{
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    
+    }
+
+    &__state{
+        line-height: 2rem;
+        font-size: 1.1rem;
+    }
+
+    &__vote{
+       position: absolute;
+        top: 0;
+        right: 0;
+        margin: .5rem;
+        cursor: pointer;
+       width: 2.5rem;
+       height: 2.5rem;
+       background-color: $secondaryColor;
+       border-radius: 50%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       box-shadow: 0 .3rem .5rem rgba(0,0,0,.2);
+
+       &--icon{
+        font-size: 1.3rem;
+        color: #eee;
+       }
+    }
+}
+
+
+
+
+/////////////////////
+/// 
+/// MODEL STYLE
+
+
+
+
+.vote-model{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+   // padding: 1rem;
+    border-radius: 1rem;
+    outline: none;
+
+
+
+    &__overlay{
+        position: fixed;
+      //  overflow: hidden;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.8);
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       position: relative;
+        color: $primaryColor;
+
+    }
+
+    &__competitor_info{
+        display:flex;
+       
+    }
+
+    &__profile{
+        flex: 30% 0 0;
+        margin-right: 2rem;
+    
+    }
+
+    &__bio{
+       flex: 1;
+
+       display: flex;
+       flex-direction: column;
+    }
+
+&__divider{
+    margin: 1rem;
+
+    label{
+        display: flex;
+        margin-left: -1rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: capitalize;
+      
+    }
+
+    span{
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+}
+
+
+&__vote_container{
+    display: flex;
+    margin: 2rem;
+
+}
+
+&__vote-count{
+    flex: 30% 0 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    button{
+        outline: none;
+        border: none;
+        background-color: $secondaryColor;
+        padding: 1rem;
+        margin: 1rem;
+        cursor: pointer;
+        align-items: center;
+       
+    }
+
+    span{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+
+    &__icons{
+        font-weight: 500;
+    }
+}
+
+form{
+
+    width: 100%;
+    
+
+    span{
+       font-size: 1.25rem;
+       
+    }
+
+    input{
+        width: 100%;
+        font-size: 1.25rem;
+        color: $secondaryTextColor;
+        outline: none;
+        border: none;
+        border: 1px solid $secondaryColor;
+        height: 3rem;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    button{
+        width: 100%;
+        outline: none;
+        border: none;
+        height: 3rem;
+        background-color: $secondaryColor ;
+        margin-top: 1rem;
+        cursor: pointer;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        color: $primaryColor;
+        font-weight: 500;
+    }
+}
+
+&__close-box{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    background-color: $secondaryColor;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+   
+}
+
+&__close{
+   
+    color: $primaryTextColor;
+}
+
+}
+
